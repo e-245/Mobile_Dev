@@ -9,15 +9,8 @@ The first activity launched by the app is a login activity, the password is 0000
 
 The user data are saved on a .txt file in the phone internal memory using this function :
 
-val file = "Save.txt"
-                val data = display.toString()
-                val fileOutputStream: FileOutputStream
-                try {
-                    fileOutputStream = openFileOutput(file, Context.MODE_PRIVATE)
-                    fileOutputStream.write(data.toByteArray())
-                }catch (e: Exception){
-                    e.printStackTrace()
-                }
+fileOutputStream = openFileOutput(file, Context.MODE_PRIVATE)
+
 The Context.MODE_PRIVATE ensure that it can only be called by the application
 
 - How did you hide the API url ?
